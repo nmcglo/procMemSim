@@ -1,5 +1,5 @@
 #Memsim.py - Operating Systems Homework 4
-#Group Project --  'Mark Plagge', Neil McGlohon
+#Group Project --  Neil McGlohon, Mark Plagge, Sean Daly
 #Main runner for the memorySim:
 
 import sys
@@ -34,11 +34,11 @@ def parsePairs(pairList):
 
 
 def usage():
-    print("USAGE: memsim [-q] <input-file> { first | best | next | worst}")
+    print("USAGE: memsim [-q] <input-file> {noncontig | first | best | next | worst}")
 # Main*********************************
 valid_opts = set(["noncontig", "first", "best", "next", "worst"])
 inOpts = set(sys.argv)
-if len(sys.argv) < 2:
+if len(sys.argv) < 3:
     #UNACCEPTABLE!
     usage()
 elif len(valid_opts.union(inOpts)) == 0:
